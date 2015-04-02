@@ -1,0 +1,6 @@
+Name: CSM.ParkingData.Theme
+Author: City of Santa Monica
+Website: https://github.com/CityofSantaMonica
+Description: Boostrap theme for the City of Santa Monica Parking Data API portal.
+Version: 1.0
+BaseTheme: CSM.BootstrapBase

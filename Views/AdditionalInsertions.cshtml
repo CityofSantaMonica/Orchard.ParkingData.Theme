@@ -1,0 +1,5 @@
+﻿@using Microsoft.WindowsAzure
+
+@{
+    Display.Analytics(TrackingId: CloudConfigurationManager.GetSetting("GoogleAnalyticsId"));
+}
