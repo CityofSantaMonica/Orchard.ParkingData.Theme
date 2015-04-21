@@ -106,7 +106,7 @@
     <Content Include="Styles\site.less" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Parts.Title.cshtml" />
+    <Content Include="Views\Parts\Title.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\AdditionalInsertions.cshtml" />
