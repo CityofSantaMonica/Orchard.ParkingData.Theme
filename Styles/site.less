@@ -2,3 +2,25 @@
 @import "variables.less";
 
 #layout-navigation { border: none; }
+
+a {
+    text-decoration: underline;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.entity-definition {
+    .table .table > tbody > tr > td {
+        border: none;
+    }
+
+    .field-datatype {
+        font-style: italic;
+        &:extend(.text-info);
+    }
+    
+    .endpoint-well {
+        p:only-child { margin-bottom: 0; }
+    }
+}

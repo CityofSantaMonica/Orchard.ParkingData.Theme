@@ -1,0 +1,21 @@
+﻿@model CSM.WebApi.ViewModels.EntityDefinition
+
+<h3>Fields</h3>
+<table class="table table-striped table-bordered table-condensed">
+    <tbody>
+        @foreach (var field in Model.Fields)
+        {
+            <tr>
+                <td>
+                    <code class="field-name">@field.ApiName</code>
+                </td>
+                <td>
+                    <span class="field-datatype">@field.DataType</span>
+                </td>
+                <td>
+                    @Html.Raw(field.Description)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

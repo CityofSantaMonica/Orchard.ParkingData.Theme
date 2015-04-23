@@ -1,0 +1,34 @@
+﻿@using CSM.WebApi.ViewModels
+
+@{
+    var entity = Model.ViewModel as EntityDefinition;
+}
+
+@Html.Raw(entity.Description)
+
+@{ Html.RenderPartial("EntityFieldsTable", entity); }
+
+@if (entity.AssociatedEndpoints.Any())
+{
+    <h3>Endpoints</h3>
+    foreach (var endpoint in entity.AssociatedEndpoints)
+    {
+        <div class="endpoint-well well well-sm">
+            <p>
+                <code>
+                    <span class="endpoint-verb">@endpoint.Verb</span>&nbsp;
+                    <span class="endpoint-path">@endpoint.ApiPath</span>
+                </code>
+            </p>
+            @if (endpoint.Parameters.Any())
+            {
+                foreach (var parameter in endpoint.Parameters)
+                {
+                    <div>
+                        @Html.Raw(parameter.Description)
+                    </div>
+                }
+            }
+        </div>
+    }
+}
