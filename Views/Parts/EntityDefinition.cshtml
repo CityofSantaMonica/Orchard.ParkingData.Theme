@@ -20,6 +20,12 @@
                     <span class="endpoint-path">@endpoint.ApiPath</span>
                 </code>
             </p>
+            @if (HasText(endpoint.Description))
+            {
+            <p>
+                @Html.Raw(endpoint.Description)
+            </p>
+            }
             @if (endpoint.Parameters.Any())
             {
                 foreach (var parameter in endpoint.Parameters)
