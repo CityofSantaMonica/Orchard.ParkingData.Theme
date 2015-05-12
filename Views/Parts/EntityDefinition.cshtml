@@ -10,9 +10,12 @@
 
 @if (entity.AssociatedEndpoints.Any())
 {
-    <h3>Endpoints</h3>
     foreach (var endpoint in entity.AssociatedEndpoints)
     {
+        if (HasText(endpoint.Description))
+        {
+            <p>@Html.Raw(endpoint.Description)</p>
+        }
         <div class="endpoint-well well well-sm">
             <p>
                 <code>
@@ -20,12 +23,6 @@
                     <span class="endpoint-path">@endpoint.ApiPath</span>
                 </code>
             </p>
-            @if (HasText(endpoint.Description))
-            {
-            <p>
-                @Html.Raw(endpoint.Description)
-            </p>
-            }
             @if (endpoint.Parameters.Any())
             {
                 foreach (var parameter in endpoint.Parameters)
