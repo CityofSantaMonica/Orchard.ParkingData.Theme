@@ -14,7 +14,9 @@
     {
         if (HasText(endpoint.Description))
         {
-            <p>@Html.Raw(endpoint.Description)</p>
+            <p>
+                <em>@Html.Raw(endpoint.Description)</em>
+            </p>
         }
         <div class="endpoint-well well well-sm">
             <p>
