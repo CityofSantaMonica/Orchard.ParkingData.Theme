@@ -30,6 +30,7 @@
                 foreach (var parameter in endpoint.Parameters)
                 {
                     <div>
+                        <strong>@Html.Raw(parameter.Required ? "required " : "optional ")</strong>
                         @Html.Raw(parameter.Description)
                     </div>
                 }
