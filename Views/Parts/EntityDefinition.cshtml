@@ -10,7 +10,7 @@
 
 @if (entity.AssociatedEndpoints.Any())
 {
-    foreach (var endpoint in entity.AssociatedEndpoints)
+    foreach (var endpoint in entity.AssociatedEndpoints.OrderBy(e => e.Title))
     {
         if (HasText(endpoint.Description))
         {
